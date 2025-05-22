@@ -36,6 +36,16 @@ class BeforesAftersProcessing {
         ),
       );
     }
+    // if (tree.style.beforeWidget != null) {
+    //   tree.children.insert(
+    //       0,
+    //       WidgetContentElement(
+    //           widget: tree.style.beforeWidget,
+    //           style: tree.style.copyWith(
+    //               beforeAfterNull: true,
+    //               display: Display.inline,
+    //               alignment: Alignment.topCenter)));
+    // }
 
     if (tree.style.after != null) {
       tree.children.add(TextContentElement(

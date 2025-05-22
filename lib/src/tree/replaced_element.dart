@@ -46,6 +46,46 @@ class TextContentElement extends ReplacedElement {
   }
 }
 
+class WidgetContentElement2 extends ReplacedElement {
+  @override
+  dom.Element element;
+
+  Widget? widget;
+
+  WidgetContentElement2({
+    required this.element,
+    required this.widget,
+    required Style style,
+  }) : super(
+          name: '[widget]',
+          style: style,
+          node: element,
+          elementId: '[[No ID]]',
+          alignment: PlaceholderAlignment.top,
+        );
+}
+
+// class WidgetContentElement extends ReplacedElement {
+//   Widget? widget;
+//   dom.Node? node;
+
+//   WidgetContentElement({
+//     required this.widget,
+//     this.node,
+//     required Style style,
+//     dom.Element? element,
+//   }) : super(
+//           name: '[widget]',
+//           style: style,
+//           node: element,
+//           elementId: '[[No ID]]',
+//           alignment: PlaceholderAlignment.top,
+//         );
+
+//   @override
+//   Widget? toWidget(_) => widget;
+// }
+
 class LinebreakContentElement extends ReplacedElement {
   LinebreakContentElement({
     required super.style,
