@@ -277,6 +277,8 @@ class Style {
     this.maxLines,
     this.textOverflow,
     this.textTransform,
+    this.beforeWidget,
+    this.afterWidget,
   }) {
     if (alignment == null && (display?.isBlock ?? false)) {
       alignment = Alignment.centerLeft;
