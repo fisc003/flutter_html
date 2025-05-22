@@ -53,6 +53,18 @@ class LinebreakContentElement extends ReplacedElement {
   }) : super(name: 'br', elementId: "[[No ID]]");
 }
 
+class WidgetContentElement extends ReplacedElement {
+  Widget? widget;
+
+  WidgetContentElement({
+    required this.widget,
+    required super.style,
+    required super.node,
+    super.alignment = PlaceholderAlignment.top,
+    dom.Element? element,
+  }) : super(name: '[widget]', elementId: '[[No ID]]');
+}
+
 class EmptyContentElement extends ReplacedElement {
   EmptyContentElement({required super.node, super.name = "empty"})
       : super(style: Style(), elementId: "[[No ID]]");

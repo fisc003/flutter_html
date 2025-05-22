@@ -212,6 +212,8 @@ class Style {
   String? before;
   String? after;
   Border? border;
+  Widget? beforeWidget;
+  Widget? afterWidget;
   Alignment? alignment;
 
   /// MaxLine
