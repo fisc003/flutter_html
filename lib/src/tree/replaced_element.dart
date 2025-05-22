@@ -46,20 +46,16 @@ class TextContentElement extends ReplacedElement {
   }
 }
 
-class WidgetContentElement2 extends ReplacedElement {
-  @override
-  dom.Element element;
-
+class WidgetContentElement extends ReplacedElement {
   Widget? widget;
 
-  WidgetContentElement2({
-    required this.element,
+  WidgetContentElement({
+    required super.node,
+    required super.style,
     required this.widget,
-    required Style style,
+    dom.Element? element,
   }) : super(
           name: '[widget]',
-          style: style,
-          node: element,
           elementId: '[[No ID]]',
           alignment: PlaceholderAlignment.top,
         );
@@ -91,18 +87,6 @@ class LinebreakContentElement extends ReplacedElement {
     required super.style,
     required super.node,
   }) : super(name: 'br', elementId: "[[No ID]]");
-}
-
-class WidgetContentElement extends ReplacedElement {
-  Widget? widget;
-
-  WidgetContentElement({
-    required this.widget,
-    required super.style,
-    required super.node,
-    super.alignment = PlaceholderAlignment.top,
-    dom.Element? element,
-  }) : super(name: '[widget]', elementId: '[[No ID]]');
 }
 
 class EmptyContentElement extends ReplacedElement {
